@@ -1,13 +1,28 @@
-﻿@model List<Scheduler.Core.Models.CalendarDayViewModel>
+﻿@{
+    ViewData["Title"] = "Preferences";
+}
+
+@model List<Scheduler.Core.Models.CalendarDayViewModel>
 
 <div class="preferences-container">
     <!--Left Section (Month Reference Schedule)-->
     <div class="preferences-left">
-        <h2>Left Section</h2>
-        <p>Content for the left section goes here</p>
+        <div id="inline-datepicker"></div>
     </div>
     <!--Right Section (Availability Schedule)-->
     <div class="preferences-right">
         @await Html.PartialAsync("_CalendarWeekView", Model)
     </div>
 </div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#inline-datepicker').datepicker({
+                format: "mm/dd/yyyy",
+                todayHighlight: true,
+                autoclose: true
+            });
+        });
+    </script>
+}
