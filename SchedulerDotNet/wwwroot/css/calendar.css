@@ -1,0 +1,22 @@
+﻿.calendar-row {
+    display: flex;
+    text-align: center;
+    padding: 10px;
+}
+
+.calendar-colum {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 0px 0px 0px 0px;
+}
+
+.calendar-date {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.calendar-day {
+    font-size: 1.0em;
+}

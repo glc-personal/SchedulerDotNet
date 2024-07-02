@@ -1,0 +1,13 @@
+﻿@model List<Scheduler.Core.Models.CalendarDayViewModel>
+
+<link rel="stylesheet" href="~/css/calendar.css"/>
+
+<div class="calendar-row">
+    @foreach (var day in Model)
+    {
+        <div class="calendar-colum">
+            <div class="calendar-date">@day.DayNumber</div>
+            <div class="calendar-day">@day.DayName</div>
+        </div>
+    }
+</div>

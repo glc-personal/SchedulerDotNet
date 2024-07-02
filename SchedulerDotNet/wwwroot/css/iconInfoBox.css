@@ -1,0 +1,25 @@
+﻿.icon-info-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 20px 0;
+    text-align: center;
+    min-height: 290px;
+}
+
+.icon-info-box .box-header {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.icon-info-box .box-icon {
+    margin-bottom: 10px;
+}
+
+.icon-info-box .box-icon img {
+    max-width: 100px;
+}
+
+.icon-info-box .box-content {
+    font-size: 1em;
+}

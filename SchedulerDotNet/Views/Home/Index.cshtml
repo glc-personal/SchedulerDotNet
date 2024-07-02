@@ -1,0 +1,67 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<!--Head Section-->
+<div class="text-center">
+    <h1 class="display-4">Optimal schedules within seconds</h1>
+    <p>
+        Optimal schedules for all, not just your manager.
+    </p>
+</div>
+
+<hr>
+
+<!--Middle Section-->
+<div class="row home-row">
+    <div class="column"></div>
+    <div class="column">
+        <h4>
+            We provide the best services for your team to schedule work hours quickly
+        </h4>
+        <p>
+            Optimal schedules for all, not just your manager.
+        </p>
+    </div>
+    <div class="column"></div>
+</div>
+
+<!--Available Options Section-->
+<div class="row home-row">
+    <!--Preferences (Availability/Criteria)-->
+    <div class="column">
+        @{
+            var availabilityIIB = new SchedulerDotNet.Models.IconInfoBoxViewModel
+            {
+                HeaderText = "Preferences",
+                IconPath = Url.Content("~/images/availability.png"),
+                ContentText = "Employee preferences are key to an optimal schedule, each employee deserves the right to work at the time they are available."
+            };
+        }
+        @await Html.PartialAsync("_IconInfoBox", availabilityIIB)
+    </div>
+    <!--Schedule-->
+    <div class="column">
+        @{
+            var scheduleIIB = new SchedulerDotNet.Models.IconInfoBoxViewModel
+            {
+                HeaderText = "Schedule",
+                IconPath = Url.Content("~/images/schedule.png"),
+                ContentText = "Optimized schedules are generated with openness in mind to maintain a prosperous environment for everyone."
+            };
+        }
+        @await Html.PartialAsync("_IconInfoBox", scheduleIIB)
+    </div>
+    <!--Team-->
+    <div class="column">
+        @{
+            var teamIIB = new SchedulerDotNet.Models.IconInfoBoxViewModel
+            {
+                HeaderText = "Team",
+                IconPath = Url.Content("~/images/team.png"),
+                ContentText = "Our true goal is to make the entire team happy, only then will we be at our full potential."
+            };
+        }
+        @await Html.PartialAsync("_IconInfoBox", teamIIB)
+    </div>
+</div>

@@ -1,0 +1,16 @@
+﻿@model SchedulerDotNet.Models.IconInfoBoxViewModel
+
+<link rel="stylesheet" href="~/css/iconInfoBox.css" />
+<link rel="stylesheet" href="~/css/site.css" />
+
+<div class="icon-info-box">
+    <div class="box-header">
+        <span>@Model.HeaderText</span>
+    </div>
+    <div class="box-icon">
+        <img src="@Model.IconPath" alt="Icon" />
+    </div>
+    <div class="box-content">
+        <p>@Model.ContentText</p>
+    </div>
+</div>
