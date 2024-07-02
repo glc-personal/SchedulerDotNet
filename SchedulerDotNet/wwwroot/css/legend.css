@@ -1,0 +1,27 @@
+﻿.legend-item {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.legend-item-square {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.bg-available {
+    background-color: mediumseagreen;
+}
+
+.bg-not-available {
+    background-color: firebrick;
+}
+
+.bg-potentially-available {
+    background-color: #ffe066;
+}
+
+.legend-item-text {
+    font-size: 1em;
+}

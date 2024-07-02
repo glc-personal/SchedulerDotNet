@@ -8,6 +8,21 @@
     <!--Left Section (Month Reference Schedule)-->
     <div class="preferences-left">
         <div id="inline-datepicker"></div>
+
+        <!--Legend-->
+        <h4>Legend</h4>
+        @await Html.PartialAsync("_LegendItem", new SchedulerDotNet.Models.LegendItemViewModel
+        {
+            BackgroundColorClass = "bg-available", Text = "Available"
+        })
+        @await Html.PartialAsync("_LegendItem", new SchedulerDotNet.Models.LegendItemViewModel
+        {
+            BackgroundColorClass = "bg-not-available", Text = "Not Available"
+        })
+        @await Html.PartialAsync("_LegendItem", new SchedulerDotNet.Models.LegendItemViewModel
+        {
+            BackgroundColorClass = "bg-potentially-available", Text = "Potentially Available"
+        })
     </div>
     <!--Right Section (Availability Schedule)-->
     <div class="preferences-right">
