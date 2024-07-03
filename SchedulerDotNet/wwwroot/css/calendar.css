@@ -10,7 +10,7 @@
     border: 1px solid #ccc;
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    margin: 5px;
+    margin: 0px;
 }
 
 .calendar-date {
@@ -22,13 +22,18 @@
     font-size: 1.0em;
 }
 
-.calendar-hours {
+.calendar-clock-icon-container {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.calendar-hour {
-    border-top: 1px solid #ddd;
-    padding: 5px 0;
-    font-size: 0.9em;
+.calendar-clock-icon-container img {
+    width: 50px;
+    height: 50px;
 }

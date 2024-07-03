@@ -1,8 +1,15 @@
 ﻿@model List<Scheduler.Core.Models.CalendarDayViewModel>
 
-<link rel="stylesheet" href="~/css/calendar.css"/>
+<link rel="stylesheet" href="~/css/calendar.css?v=@DateTime.Now.Ticks" />
 
 <div class="calendar-row">
+    <div class="calendar-column">
+        <div class="calendar-date">
+            <div class="calendar-clock-icon-container">
+                <img src="~/images/clock.png" alt="Icon" />
+            </div>
+        </div>              
+    </div>
     @foreach (var day in Model)
     {
         <div class="calendar-colum">
