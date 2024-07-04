@@ -1,0 +1,17 @@
+﻿.description-container {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.description-title {
+    font-family: Arial, sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.descriptor-description {
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    color: #555;
+}
