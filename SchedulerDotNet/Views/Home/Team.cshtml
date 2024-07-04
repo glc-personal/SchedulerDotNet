@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Team";
+}
+
+@model SchedulerDotNet.Models.DescriptorViewModel
+
+<div class="team-view-container">
+    <!--Left Section (Team Manager)-->
+    <div class="team-view-left">
+        <h1>Manager</h1>
+    </div>
+    <!--Right Section (Team Members)-->
+    <div class="team-view-right">
+        @await Html.PartialAsync("_Descriptor", new SchedulerDotNet.Models.DescriptorViewModel
+        {
+            Title = "Team",
+            Description = "Below you can find you and your team."
+        })
+    </div>
+</div>
+
