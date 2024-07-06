@@ -1,0 +1,33 @@
+﻿@model SchedulerDotNet.Models.TeamViewModel
+
+<div class="team-view-container">
+    <!--Left Section (Team Manager)-->
+    <div class="team-view-left">
+        <h1>Manager</h1>
+    </div>
+    <!--Right Section (Team Members)-->
+    <div class="team-view-right">
+        @if (Model?.Descriptor != null)
+        {
+            @await Html.PartialAsync("_Descriptor", Model.Descriptor)
+        }
+        else
+        {
+            <p>No descriptor available.</p>
+        }
+
+        @if (Model?.Usernames != null)
+        {
+            <ul>
+                @foreach (var username in Model.Usernames)
+                {
+                    <li>@username</li>
+                }
+            </ul>
+        }
+        else
+        {
+            <p>No usernames available.</p>
+        }
+    </div>
+</div>
