@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="bootstrap" Version="5.3.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.6" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
     <PackageReference Include="popper.js" Version="1.16.1" />
   </ItemGroup>
@@ -15,6 +16,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Scheduler.Core\Scheduler.Core.csproj" />
     <ProjectReference Include="..\Scheduler.ApplicationServices\Scheduler.ApplicationServices.csproj" />
+    <ProjectReference Include="..\Scheduler.DataAccess\Scheduler.DataAccess.csproj" />
   </ItemGroup>
 
 </Project>

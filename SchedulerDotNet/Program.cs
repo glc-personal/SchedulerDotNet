@@ -1,10 +1,26 @@
+using Microsoft.EntityFrameworkCore;
 using Scheduler.ApplicationServices.Implementations;
 using Scheduler.Core.Interfaces;
+using Scheduler.Core.Models;
+using Scheduler.DataAccess;
+using Scheduler.DataAccess.Interfaces;
+using Scheduler.DataAccess.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Setup the Database (db) connection
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<SchedulerDbContext>(options =>
+    options.UseSqlServer(connectionString));
+
+// Register Repositories
+builder.Services.AddScoped<IRepository<User>, UserRepository>();
+builder.Services.AddScoped<IRepository<Title>, TitleRepository>();
+
+// Register Services
 builder.Services.AddScoped<IDateService, DateService>();
 
 var app = builder.Build();
