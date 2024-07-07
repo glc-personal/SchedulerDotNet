@@ -45,6 +45,7 @@ namespace Scheduler.DataAccess
                     Title = "Manager",
                     MinutesWorked = 0,
                     ConsecutiveDaysWorked = 0,
+                    ProfilePicturePath = string.Empty,
                 },
                 // Team Member example user (needs to be removed after development)
                 new User
@@ -67,6 +68,7 @@ namespace Scheduler.DataAccess
                     Title = "Team Member",
                     MinutesWorked = 0,
                     ConsecutiveDaysWorked = 0,
+                    ProfilePicturePath = string.Empty,
                 }
             };
             modelBuilder.Entity<User>().HasData(defaultUsers);

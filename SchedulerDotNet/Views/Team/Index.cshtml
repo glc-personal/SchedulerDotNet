@@ -1,13 +1,23 @@
-﻿@model SchedulerDotNet.Models.TeamViewModel
+﻿@{
+    ViewData["Title"] = "Team";
+}
+
+@model SchedulerDotNet.Models.TeamViewModel
 
 <div class="team-view-container">
     <!--Left Section (Team Manager)-->
     <div class="team-view-left">
-        <h1>Manager</h1>
+        @for (int i = 0; i < Model?.Users.Count(); i++)
+        {
+            @if (Model?.Users[i].Title == "Manager")
+            {
+                @await Html.PartialAsync("_ProfileStamp", Model.ProfileStamps[i])
+            }
+        }
     </div>
     <!--Right Section (Team Members)-->
     <div class="team-view-right">
-        @await Html.PartialAsync("_Descriptor", Model.Descriptor)
+        @await Html.PartialAsync("_Descriptor", Model?.Descriptor)
         <ul>
             @for (int i = 0; i < Model?.TeamMemberNames.Count(); i++)
             {

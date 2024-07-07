@@ -1,0 +1,23 @@
+﻿@model SchedulerDotNet.Models.ProfileStampViewModel
+
+<link rel="stylesheet" href="~/css/profileStamp.css" />
+<link rel="stylesheet" href="~/css/site.css" />
+
+<div class="profile-stamp-container">
+    <div class="profile-stamp-picture">
+        @if (Model.ProfilePicturePath != string.Empty) 
+        {
+            <img src="@Model.ProfilePicturePath" alt="Icon" />
+        }
+        else 
+        {
+            <img src="~/images/user.png" alt="Icon" />
+        }
+    </div>
+    <div class="profile-stamp-name">
+        <span>@Model.Name</span>
+    </div>
+    <div class="profile-stamp-title">
+        <span>@Model.Title</span>
+    </div>
+</div>
