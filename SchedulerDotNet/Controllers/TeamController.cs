@@ -18,25 +18,22 @@ namespace SchedulerDotNet.Controllers
 
         public IActionResult Index()
         {
-            _logger.LogInformation("Team View Index action called");
             // Setup the Descriptor for the view
             var descriptor = new DescriptorViewModel
             {
                 Title = "Team",
                 Description = "Below you can find you and your team."
             };
-            _logger.LogInformation("Team View - Descriptor setup with title: {Title} and Description: {Description}",
-                descriptor.Title, descriptor.Description);
 
             // Get all users (change to get all users in a team later)
             var users = _userService.GetAllUsers();
             var viewModel = new TeamViewModel
             {
                 Usernames = users.Select(u => u.Username).ToList(),
+                TeamMemberNames = users.Select(u => u.FirstName + " " + u.LastName).ToList(),
+                TeamMemberTitles = users.Select(u => u.Title).ToList(),
                 Descriptor = descriptor
             };
-            _logger.LogInformation("Team View - Users obtained with usernames: {usernames}",
-                viewModel.Usernames);
 
             return View(viewModel);
         }
