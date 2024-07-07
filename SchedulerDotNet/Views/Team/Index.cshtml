@@ -7,27 +7,12 @@
     </div>
     <!--Right Section (Team Members)-->
     <div class="team-view-right">
-        @if (Model?.Descriptor != null)
-        {
-            @await Html.PartialAsync("_Descriptor", Model.Descriptor)
-        }
-        else
-        {
-            <p>No descriptor available.</p>
-        }
-
-        @if (Model?.Usernames != null)
-        {
-            <ul>
-                @foreach (var username in Model.Usernames)
-                {
-                    <li>@username</li>
-                }
-            </ul>
-        }
-        else
-        {
-            <p>No usernames available.</p>
-        }
+        @await Html.PartialAsync("_Descriptor", Model.Descriptor)
+        <ul>
+            @for (int i = 0; i < Model?.TeamMemberNames.Count(); i++)
+            {
+                <li>@Model?.TeamMemberNames[i] - @Model?.TeamMemberTitles[i]</li>
+            }
+        </ul>        
     </div>
 </div>
