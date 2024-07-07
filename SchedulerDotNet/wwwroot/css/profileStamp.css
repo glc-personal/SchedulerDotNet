@@ -1,0 +1,23 @@
+﻿.profile-stamp-container {
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+    min-height: 290px;
+}
+
+.profile-stamp-container .profile-stamp-name {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.profile-stamp-container .profile-stamp-picture {
+    margin-bottom: 10px;
+}
+
+    .profile-stamp-container .profile-stamp-picture img {
+        max-width: 100px;
+    }
+
+.profile-stamp-container .profile-stamp-title {
+    font-size: 1em;
+}

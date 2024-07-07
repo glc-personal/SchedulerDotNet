@@ -20,6 +20,6 @@
         public string Title { get; set; }
         public int MinutesWorked { get; set; }
         public int ConsecutiveDaysWorked { get; set; }
-        // User image 
+        public string ProfilePicturePath { get; set; }
     }
 }

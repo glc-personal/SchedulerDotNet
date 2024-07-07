@@ -20,4 +20,8 @@
     <ProjectReference Include="..\Scheduler.Core\Scheduler.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="HowTo\" />
+  </ItemGroup>
+
 </Project>

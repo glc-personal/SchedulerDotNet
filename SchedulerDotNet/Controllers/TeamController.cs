@@ -27,11 +27,31 @@ namespace SchedulerDotNet.Controllers
 
             // Get all users (change to get all users in a team later)
             var users = _userService.GetAllUsers();
+            // Setup the profile stamps for each user
+            var profileStamps = new List<ProfileStampViewModel>();
+            foreach (var user in users)
+            {
+                var profilePicturePath = user.ProfilePicturePath;
+                if (profilePicturePath == string.Empty)
+                {
+                    profilePicturePath = "/images/user.png";
+                }
+                profileStamps.Add(new ProfileStampViewModel
+                {
+                    ProfilePicturePath = profilePicturePath,
+                    Name = user.FirstName + " " + user.LastName,
+                    Title = user.Title,
+                });
+            }
+
+            // Setup the ViewModel for this View
             var viewModel = new TeamViewModel
             {
                 Usernames = users.Select(u => u.Username).ToList(),
                 TeamMemberNames = users.Select(u => u.FirstName + " " + u.LastName).ToList(),
                 TeamMemberTitles = users.Select(u => u.Title).ToList(),
+                Users = users,
+                ProfileStamps = profileStamps,
                 Descriptor = descriptor
             };
 
