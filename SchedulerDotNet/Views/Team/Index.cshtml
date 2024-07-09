@@ -21,7 +21,7 @@
         <ul>
             @for (int i = 0; i < Model?.TeamMemberNames.Count(); i++)
             {
-                <li>@Model?.TeamMemberNames[i] - @Model?.TeamMemberTitles[i]</li>
+                @await Html.PartialAsync("_ProfileStamp", Model.ProfileStamps[i])
             }
         </ul>        
     </div>
