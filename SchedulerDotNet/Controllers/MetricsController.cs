@@ -28,16 +28,16 @@ namespace SchedulerDotNet.Controllers
                 return View("Error");
             }
 
-            // Setup the View's Right Section 
-            SetupRightSection(viewModel);
-
-            // Setup the View's Left Section
+            // Setup the View's Left Section 
             SetupLeftSection(viewModel);
+
+            // Setup the View's Right Section
+            SetupRightSection(viewModel);
 
             return View(viewModel);
         }
 
-        private void SetupRightSection(MetricsViewModel viewModel)
+        private void SetupLeftSection(MetricsViewModel viewModel)
         {
             User user = viewModel.User;
             // Setup the Profile Stamp for this user
@@ -50,7 +50,7 @@ namespace SchedulerDotNet.Controllers
             viewModel.ProfileStamp = profileStamp;
         }
 
-        private void SetupLeftSection(MetricsViewModel viewModel)
+        private void SetupRightSection(MetricsViewModel viewModel)
         {
             User user = viewModel.User;
             DescriptorViewModel overviewDescriptor = new DescriptorViewModel
@@ -59,6 +59,34 @@ namespace SchedulerDotNet.Controllers
                 Description = "Below you can find small summary metrics and information regarding your performance."
             };
             viewModel.OverviewDescriptor = overviewDescriptor;
+
+            MetricStampViewModel consecutiveDaysMetricStamp = new MetricStampViewModel
+            {
+                Metric = "Consecutive Days",
+                IconPath = "/images/consecutive_days.png",
+                Value = "33",
+                Rank = "1st"
+            };
+            viewModel.ConsecutiveDaysMetricStamp = consecutiveDaysMetricStamp;
+
+            MetricStampViewModel availableHoursMetricStamp = new MetricStampViewModel
+            {
+                Metric = "Available Hours",
+                IconPath = "/images/available_hours.png",
+                Value = "62",
+                Rank = "2nd"
+            };
+            viewModel.AvailableHoursMetricStamp = availableHoursMetricStamp;
+
+            MetricStampViewModel monthsWorkedMetricStamp = new MetricStampViewModel
+            {
+                Metric = "Months Worked",
+                IconPath = "/images/months_worked.png",
+                Value = "6",
+                Rank = "14th"
+            };
+            viewModel.MonthsWorkedMetricStamp = monthsWorkedMetricStamp;
+
             DescriptorViewModel hoursWorkedDescriptor = new DescriptorViewModel
             {
                 Title = "Hours Worked",

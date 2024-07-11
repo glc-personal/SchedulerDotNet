@@ -1,0 +1,12 @@
+﻿@model SchedulerDotNet.Models.MetricStampViewModel
+
+<link rel="stylesheet" href="~/css/metricStamp.css" />
+
+<div class="metric-stamp-container">
+    <div class="metric-stamp-metric">@Model.Metric</div>
+    <div class="metric-stamp-icon">
+        <img src="@Model.IconPath" alt="Metric Image" />
+    </div>
+    <div class="metric-stamp-value">@Model.Value</div>
+    <div class="metric-stamp-rank">@Model.Rank</div>
+</div>

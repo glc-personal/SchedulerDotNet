@@ -12,6 +12,17 @@
     <!--Right Section (User Metrics)-->
     <div class="team-view-right">
         @await Html.PartialAsync("_Descriptor", Model?.OverviewDescriptor)
+        <div class="row mt-3">
+            <div class="col-md-4 mb-3">
+                @await Html.PartialAsync("_MetricStamp", Model?.ConsecutiveDaysMetricStamp)
+            </div>
+            <div class="col-md-4 mb-3">
+                @await Html.PartialAsync("_MetricStamp", Model?.AvailableHoursMetricStamp)
+            </div>
+            <div class="col-md-4 mb-3">
+                @await Html.PartialAsync("_MetricStamp", Model?.MonthsWorkedMetricStamp)
+            </div>
+        </div>  
         @await Html.PartialAsync("_Descriptor", Model?.HoursWorkedDescriptor)
     </div>
 </div>
