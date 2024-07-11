@@ -1,4 +1,4 @@
-# HowTo-SetupPartialView
+# HowTo-AddPartialView
 
 ## Summary
 This HowTo is designated to showing how to setup a partial view which can be reused across
