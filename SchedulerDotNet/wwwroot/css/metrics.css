@@ -1,0 +1,17 @@
+﻿.metrics-view-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.metrics-view-left {
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding: 10px;
+}
+
+.metrics-view-right {
+    flex: 0 0 75%;
+    max-width: 75%;
+    padding: 10px;
+}

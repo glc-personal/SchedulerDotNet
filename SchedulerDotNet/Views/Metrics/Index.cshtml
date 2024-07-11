@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Metrics";
+}
+
+@model SchedulerDotNet.Models.MetricsViewModel
+
+<div class="team-view-container">
+    <!--Left Section (User Profile Stamp)-->
+    <div class="team-view-left">
+        @await Html.PartialAsync("_ProfileStamp", Model?.ProfileStamp)
+    </div>
+    <!--Right Section (User Metrics)-->
+    <div class="team-view-right">
+        @await Html.PartialAsync("_Descriptor", Model?.OverviewDescriptor)
+        @await Html.PartialAsync("_Descriptor", Model?.HoursWorkedDescriptor)
+    </div>
+</div>

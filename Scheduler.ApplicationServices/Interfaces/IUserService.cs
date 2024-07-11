@@ -6,5 +6,7 @@ namespace Scheduler.ApplicationServices.Interfaces
     public interface IUserService
     {
         List<User> GetAllUsers(); 
+
+        Task<User> GetUserByIdAsync(int id);
     }
 }
