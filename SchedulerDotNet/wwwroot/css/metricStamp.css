@@ -1,0 +1,37 @@
+﻿.metric-stamp-container {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+    .metric-stamp-container .metric-stamp-metric {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    .metric-stamp-container .metric-stamp-icon {
+        margin-bottom: 10px;
+    }
+
+        .metric-stamp-container .metric-stamp-icon img {
+            width: 100px;
+            height: 100px;
+        }
+
+    .metric-stamp-container .metric-stamp-value {
+        font-size: 2em;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .metric-stamp-container .metric-stamp-rank {
+        font-size: 0.9em;
+        color: green;
+        position: absolute;
+        bottom: 10px;
+        right: 30px;
+    }
