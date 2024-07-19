@@ -41,6 +41,8 @@ namespace SchedulerDotNet.Controllers
                     ProfilePicturePath = profilePicturePath,
                     Name = user.FirstName + " " + user.LastName,
                     Title = user.Title,
+                    ProfilePictureWidth = "100px",
+                    ProfilePictureHeight = "100px",
                 });
             }
 

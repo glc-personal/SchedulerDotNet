@@ -4,6 +4,10 @@
 
 @model SchedulerDotNet.Models.MetricsViewModel
 
+@section Scripts {
+    <script src="~/js/metrics-hours-worked-chart.js"></script>
+}
+
 <div class="team-view-container">
     <!--Left Section (User Profile Stamp)-->
     <div class="team-view-left">
@@ -23,6 +27,10 @@
                 @await Html.PartialAsync("_MetricStamp", Model?.MonthsWorkedMetricStamp)
             </div>
         </div>  
+        <!-- Hours Worked -->
         @await Html.PartialAsync("_Descriptor", Model?.HoursWorkedDescriptor)
+        <div class="chart-container" style="position: relative; height: 40vh; width: 80vw">
+            <canvas id="metricsHoursWorkedChart"></canvas>
+        </div>
     </div>
 </div>
